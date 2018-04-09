@@ -1,9 +1,9 @@
 # Definição de Escopo?
 
-### 1 - Objetivos do produto e do projeto <br>
-### 2 - Descrição do escopo do produto <br>
-### 3 - Justificativa do projeto <br>
-### 4 - Restrições do projeto <br>
-### 5 - Premissas do projeto <br>
-### 6 - Partes interessadas do projeto <br>
-### 7 - Premissas do projeto <br>
+### 1 - Qual o problema de integração que será resolvido? <br>
+### 2 - Informações sobre os dados a serem trocados entre as aplicações <br>
+### 3 - JSON, XML, binário? <br>
+### 4 - Há um esquema? <br>
+### 5 - Qual a frequência da interação entre as aplicações? <br>
+### 6 - Em que circunstâncias a interação deve ocorrer? <br>
+
