@@ -17,16 +17,16 @@ public class Publicador {
         Connection connection = fabricaDeConexao.newConnection();
         Channel canal = connection.createChannel();
 
-        canal.queueDeclare("my-queue", true, false, false, null);
+        canal.queueDeclare("lista", true, false, false, null);
 
         int contador = 0;
 
         while (contador < 5000) {
             String mensagem = "Message number " + contador;
 
-            canal.basicPublish("", "my-queue", null, mensagem.getBytes());
+            canal.basicPublish("", "lista", null, mensagem.getBytes());
             contador++;
-            System.out.println("Published message: " + mensagem);
+            System.out.println("Mensagem publicada: " + mensagem);
 
             Thread.sleep(5000);
         }
