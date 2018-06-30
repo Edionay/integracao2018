@@ -15,10 +15,10 @@ public class Consumidor {
         Connection connection = fabricaDeConexao.newConnection();
         Channel canal = connection.createChannel();
 
-        canal.queueDeclare("lista", true, false, false, null);
+        canal.queueDeclare("pedidos", true, false, false, null);
 
         QueueingConsumer consumidor = new QueueingConsumer(canal);
-        canal.basicConsume("lista", false, consumidor);
+        canal.basicConsume("pedidos", false, consumidor);
 
         while (true) {
             QueueingConsumer.Delivery entrega = consumidor.nextDelivery();
