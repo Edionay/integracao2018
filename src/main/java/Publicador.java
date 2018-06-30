@@ -1,8 +1,3 @@
-import com.google.gson.Gson;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
-
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.security.KeyManagementException;
@@ -13,20 +8,15 @@ public class Publicador {
 
     public static void main(String[] args) throws NoSuchAlgorithmException, KeyManagementException, URISyntaxException, IOException, InterruptedException, TimeoutException {
 
-        ConnectionFactory fabricaDeConexao = new ConnectionFactory();
-        fabricaDeConexao.setUri("amqp://guest:guest@localhost");
-        fabricaDeConexao.setConnectionTimeout(300000);
-        Connection connection = fabricaDeConexao.newConnection();
-        Channel canal = connection.createChannel();
-
-        canal.queueDeclare("lista", true, false, false, null);
+        ConexaoAMQP conexao = new ConexaoAMQP("amqp://guest:guest@localhost", "pedidos");
+        String pedido = "teste";
 
         int contador = 0;
 
         while (contador < 5000) {
             String mensagem = "Mensagem número: " + contador;
 
-            canal.basicPublish("", "lista", null, mensagem.getBytes());
+            conexao.enviarMensagem(pedido);
             contador++;
             System.out.println("Mensagem publicada: " + mensagem);
 
