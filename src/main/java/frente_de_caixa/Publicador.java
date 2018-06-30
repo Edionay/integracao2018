@@ -1,3 +1,7 @@
+package frente_de_caixa;
+
+import conexao_amqp.ConexaoAMQP;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.security.KeyManagementException;

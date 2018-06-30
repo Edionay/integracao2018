@@ -1,8 +1,9 @@
-import com.rabbitmq.client.*;
+package sistema_principal;
+
+import conexao_amqp.ConexaoAMQP;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.concurrent.TimeoutException;
