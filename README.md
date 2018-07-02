@@ -22,6 +22,7 @@ Repositório criado com intuito de armazenar arquivos do grupo de Integração d
 | Erick Vinícius | Documentação               |
 
 - **Processo a ser seguido pela equipe**
+![Processo a ser seguido pela equipe](https://raw.githubusercontent.com/Edionay/integracao2018/master/docs/Imagens/processoBPMN.jpeg)
 - **Mecanismo de comunicação utilizado pelos membros da equipe.**  
   - [WhatsAppMessenger](https://www.whatsapp.com/)
 
