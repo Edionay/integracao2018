@@ -1,9 +1,9 @@
 # Definição Ferramentas 
 
-- Trello <br>
-- GitHub <br>
-- Slack <br>
-- Draw.io <br>
-- Visual Studio Code <br>
-- SmartGit <br>
-- Git Kraken <br>
+- [Trello](https://trello.com/)
+- [GitHub](https://github.com/)
+- [WhatsApp Messenger](https://www.whatsapp.com/)
+- [Draw.io](https://www.draw.io/)
+- [SmartGit](https://www.syntevo.com/smartgit/)
+- [RabbitMQ](https://www.rabbitmq.com/)
+- [Intellij IDEA](https://www.jetbrains.com/idea/)
