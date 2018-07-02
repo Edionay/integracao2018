@@ -1,2 +1,3 @@
 .idea/
-com.edionay.rabbitmq-exemplo.iml
+*.iml
+.target/
