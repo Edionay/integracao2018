@@ -7,13 +7,22 @@ Será resolvido um problema de integração entre sistemas de caizas de supermer
 As informações a serem trocadas serão dados referentes as vendas realizadas, contendo produto vendido, quantidade e valor unitário.<br>
 
 ### 3 - JSON, XML, binário? <br>
-Utilização de JSON.
+Serão enviados bytes como mensagens.
 
 ### 4 - Há um esquema? <br>
-**WIP**<br>
+A mensagem se resume a um objeto Venda como visto abaixo.
+<br>
+public Class Venda implements Serializable{  
+    private String produto;  
+    private double valor;  
+    private int quantidade;
+}
+
+Esse objeto será serializado e enviado como mensagem.
+<br>
 
 ### 5 - Qual a frequência da interação entre as aplicações? <br>
 Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central, por sua vez, captura mensagens em intervalos de tempo podendo variar de algumas horas até dariamente. <br>
 
 ### 6 - Em que circunstâncias a interação deve ocorrer? <br>
-Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central deve interagir quando for necessário atualizar o estoque e fechar o balanço.<br>
+Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central deve interagir quando for necessário atualizar o estoque e/ou fechar o balanço.<br>
