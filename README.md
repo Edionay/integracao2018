@@ -41,3 +41,9 @@ Repositório criado com intuito de armazenar arquivos do grupo de Integração d
 Utilizamos o container Management do RabbitMQ para testar o canal em um contexto "real" com o seguinte comando:
 
 `docker run -d --hostname rabbit --name rabbit -p 8080:15672 -p 5672:5672 rabbitmq:3-management`
+
+Com o container rodando, ao executar a classe `Publicador` do pacote `frente_de_caixa`, acontece a simulação do envio de uma venda (publicação de uma mensagem no canal).  
+
+Neste momento é possível acompanhar a "alimentação" da fila no RabbitMQ através do endereço `http://localhost:8080` utilizando as credendiais de usuário *user* e senha *user*
+
+Após este processo, executando a classe `Consumidor` do pacote `sistema_principal`, é possível acompanhar na interface do RabbitMQ que a última mensagem da fila doi consumida.
