@@ -6,7 +6,7 @@ Edionay Aguiar <br>
 Erick Vieira <br>
 João Lucas Pacheco <br>
 
-# Exemplo utilizando o Docker
+# Exemplo utilizando o [Docker](https://www.docker.com/)
 
 Utilizamos o container Management do RabbitMQ para testar o canal em um contexto "real" com o seguinte comando:
 
