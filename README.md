@@ -9,10 +9,10 @@ Repositório criado com intuito de armazenar arquivos do grupo de Integração d
   - **JSON, XML, binário?**  
   Serão enviados bytes como mensagens.
   - **Há um esquema?**
-  - **Qual a frequência da interação entre as aplicações?**
+  - **Qual a frequência da interação entre as aplicações?**  
   Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central, por sua vez, captura mensagens em intervalos de tempo podendo variar de algumas horas até dariamente.
-  - **Em que circunstâncias a interação deve ocorrer?**
-  Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central deve interagir quando for necessário atualizar o estoque e/ou fechar o balanço.
+  - **Em que circunstâncias a interação deve ocorrer?**  
+  Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central verifica a fila de tempos em tempos em busca de mensagens. Ele faz, então, o processamento da mensagem e continua o ciclo de procura por mensagens na fila.
 - **Distribuição de papéis entre os membros da equipe**  
 
 | Integrante     | Papel                      |
