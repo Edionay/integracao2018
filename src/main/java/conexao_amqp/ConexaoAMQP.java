@@ -17,31 +17,57 @@ public class ConexaoAMQP  {
     private Connection conexao = fabricaDeConexao.newConnection();
     private Channel canal = conexao.createChannel();
 
+    /**
+     *Contrutor da conexãoAMQP
+     *
+     * @param enderecoAMQP
+     * @param fila
+     * @throws NoSuchAlgorithmException
+     * @throws KeyManagementException
+     * @throws URISyntaxException
+     * @throws IOException
+     */
     public ConexaoAMQP(String enderecoAMQP, String fila) throws NoSuchAlgorithmException, KeyManagementException, URISyntaxException, IOException {
         fabricaDeConexao.setUri(enderecoAMQP);
         fabricaDeConexao.setConnectionTimeout(10000);
         canal.queueDeclare(fila, true, false, false, null);
     }
 
-    public void enviarMensagem(String mensagem) throws IOException {
-        canal.basicPublish("", "pedidos", null, mensagem.getBytes());
+    /**
+     * Envia a mensagem em byte[] para a fila
+     * @param mensagem
+     * @param fila
+     * @throws IOException
+     */
+    public void enviarMensagem(byte[] mensagem, String fila) throws IOException {
+        canal.basicPublish("", fila, null, mensagem);
     }
 
-    public void consumirMensagem() throws IOException, InterruptedException {
+    /**
+     * Consome a mensagem da fila e a retorna o byte[]
+     * @param fila
+     * @throws IOException
+     * @throws InterruptedException
+     */
+    public byte[] consumirMensagem(String fila) throws IOException, InterruptedException {
         QueueingConsumer consumidor = new QueueingConsumer(canal);
-        canal.basicConsume("pedidos", false, consumidor);
+        canal.basicConsume(fila, false, consumidor);
 
         QueueingConsumer.Delivery entrega = consumidor.nextDelivery();
 
         if (entrega != null) {
             try {
-                String mensagem = new String(entrega.getBody(), StandardCharsets.UTF_8);
-                System.out.println("Mensagem consumida: " +mensagem);
+                byte[] mensagem = entrega.getBody();
+//              String mensagem = new String(entrega.getBody(), StandardCharsets.UTF_8);
                 canal.basicAck(entrega.getEnvelope().getDeliveryTag(), false);
+
+                return mensagem;
+
             } catch (Exception e) {
                 canal.basicAck(entrega.getEnvelope().getDeliveryTag(), true);
             }
         }
+        return null;
     }
 }
 
