@@ -12,7 +12,7 @@ import java.util.concurrent.TimeoutException;
 
 public class Consumidor {
     public static void main(String[] args) throws NoSuchAlgorithmException, KeyManagementException, URISyntaxException,
-            IOException, TimeoutException, InterruptedException, ClassNotFoundException {
+            IOException, InterruptedException, ClassNotFoundException {
 
         ConexaoAMQP conexao = new ConexaoAMQP("amqp://guest:guest@localhost", "pedidos");
         //Recebe o objeto e dá cast para Venda
@@ -29,10 +29,8 @@ public class Consumidor {
      * @throws ClassNotFoundException
      */
     public static Object consumir(ConexaoAMQP conexao, String fila) throws IOException, InterruptedException, ClassNotFoundException {
-        Serializer serializer = new Serializer();
         //Captura o byte[] e transforma em Objeto
-        Object objeto = serializer.deserialize(conexao.consumirMensagem(fila));
-        return objeto;
+        return Serializer.deserialize(conexao.consumirMensagem(fila));
     }
 
 }
