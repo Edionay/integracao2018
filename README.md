@@ -14,7 +14,7 @@ Utilizamos o container Management do RabbitMQ para testar o canal em um contexto
 
 # Descrição da atividade
 
-Definição e desenvolvimento de um projeto de integração de aplicações no qual troca de mensagens é utilizada. 
+## Definição e desenvolvimento de um projeto de integração de aplicações no qual troca de mensagens é utilizada. 
 
 O grupo estabelecido logo na primeira aula deverá iniciar o esforço de identificação e caracterização (documentação) precisa do projeto de integração. O docente da disciplina, portanto, não irá apresentar o trabalho prático sobre o qual o grupo será avaliado. Ao longo do mês de março o docente irá auxiliar o grupo nessa definição. A expectativa é o que o projeto seja “interessante” ao grupo.  
 As aplicações, pelo menos duas necessárias para que ocorra a integração, não necessariamente existem, nem tampouco precisam ser desenvolvidas. Observe que o escopo do trabalho restringe-se à integração e não inclui as aplicações que serão “integradas”. 
