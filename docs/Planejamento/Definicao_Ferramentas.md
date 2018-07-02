@@ -6,3 +6,4 @@
 - [Draw.io](https://www.draw.io/)
 - [SmartGit](https://www.syntevo.com/smartgit/)
 - [RabbitMQ](https://www.rabbitmq.com/)
+- [Intellij IDEA](https://www.jetbrains.com/idea/)
