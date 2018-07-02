@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"conexao_amqp"},{"l":"frente_de_caixa"},{"l":"serializer"},{"l":"sistema_principal"},{"l":"venda"}]
