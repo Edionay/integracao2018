@@ -1,5 +1,0 @@
-frente_de_caixa\Publicador.class
-serializer\Serializer.class
-sistema_principal\Consumidor.class
-venda\Venda.class
-conexao_amqp\ConexaoAMQP.class
