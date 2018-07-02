@@ -11,21 +11,12 @@ import java.security.NoSuchAlgorithmException;
 import java.util.concurrent.TimeoutException;
 
 public class Consumidor {
-    public static void main(String[] args) throws NoSuchAlgorithmException, KeyManagementException, URISyntaxException, IOException, TimeoutException, InterruptedException, ClassNotFoundException {
+    public static void main(String[] args) throws NoSuchAlgorithmException, KeyManagementException, URISyntaxException,
+            IOException, TimeoutException, InterruptedException, ClassNotFoundException {
 
         ConexaoAMQP conexao = new ConexaoAMQP("amqp://guest:guest@localhost", "pedidos");
-
-        int contador =0;
-
-        while (contador<5000) {
-
-            //Recebe o objeto e dá cast para Venda
-            Venda venda = (Venda) consumir(conexao, "pedidos");
-
-            System.out.println(venda.toString());
-
-            Thread.sleep(4000);
-        }
+        //Recebe o objeto e dá cast para Venda
+        Venda venda = (Venda) consumir(conexao, "pedidos");
     }
 
     /**
