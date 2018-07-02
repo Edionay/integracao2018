@@ -4,9 +4,9 @@ Repositório criado com intuito de armazenar arquivos do grupo de Integração d
 ## **Definição do projeto de integração**
 - **Escopo definido com clareza.**
   - **Qual o problema de integração que será resolvido?**  
-  Será resolvido um problema de integração entre sistemas de caizas de supermercados e um sistema central de estoque. Os caixas enviarão mensagens contendo dados sobre vendas realizadas, e o sistema central irá capturar essas mensagens e processá-las de acordo.
+  Será resolvido um problema de integração entre sistemas de caixas de supermercados e um sistema central de estoque. Os vários caixas enviarão mensagens contendo dados sobre vendas realizadas, e o sistema central irá capturar essas mensagens e processá-las de acordo com sua necessidade (contabilização de estoque, computação de contas etc.).
 - **Informações sobre os dados a serem trocados entre as aplicações**  
-  - JSON, XML, binário?
+  - **JSON, XML, binário?**  
   Serão enviados bytes como mensagens.
   - **Há um esquema?**
   - **Qual a frequência da interação entre as aplicações?**
@@ -20,6 +20,7 @@ Repositório criado com intuito de armazenar arquivos do grupo de Integração d
 | Edionay Aguiar | Codificação e Documentação |
 | João Lucas     | Codificação e Documentação |
 | Erick Vinícius | Documentação               |
+| Paula Resende  | Planejamento               |
 
 - **Processo a ser seguido pela equipe**
 ![Processo a ser seguido pela equipe](https://raw.githubusercontent.com/Edionay/integracao2018/master/docs/Imagens/processoBPMN.jpeg)
