@@ -5,15 +5,15 @@ Repositório criado com intuito de armazenar arquivos do grupo de Integração d
 - **Escopo definido com clareza.**
   - **Qual o problema de integração que será resolvido?**  
   Será resolvido um problema de integração entre sistemas de caizas de supermercados e um sistema central de estoque. Os caixas enviarão mensagens contendo dados sobre vendas realizadas, e o sistema central irá capturar essas mensagens e processá-las de acordo.
-- Informações sobre os dados a serem trocados entre as aplicações
+- **Informações sobre os dados a serem trocados entre as aplicações**  
   - JSON, XML, binário?
-  *Serão enviados bytes como mensagens.*
-  - Há um esquema?
-  - Qual a frequência da interação entre as aplicações?
-  *Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central, por sua vez, captura mensagens em intervalos de tempo podendo variar de algumas horas até dariamente.*
-  - Em que circunstâncias a interação deve ocorrer?
-  *Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central deve interagir quando for necessário atualizar o estoque e/ou fechar o balanço.*
-- Distribuição de papéis entre os membros da equipe  
+  Serão enviados bytes como mensagens.
+  - **Há um esquema?**
+  - **Qual a frequência da interação entre as aplicações?**
+  Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central, por sua vez, captura mensagens em intervalos de tempo podendo variar de algumas horas até dariamente.
+  - **Em que circunstâncias a interação deve ocorrer?**
+  Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central deve interagir quando for necessário atualizar o estoque e/ou fechar o balanço.
+- **Distribuição de papéis entre os membros da equipe**  
 
 | Integrante     | Papel                      |
 | -------------  |:--------------------------:|
@@ -21,11 +21,11 @@ Repositório criado com intuito de armazenar arquivos do grupo de Integração d
 | João Lucas     | Codificação e Documentação |
 | Erick Vinícius | Documentação               |
 
-- Processo a ser seguido pela equipe
-- Mecanismo de comunicação utilizado pelos membros da equipe.  
+- **Processo a ser seguido pela equipe**
+- **Mecanismo de comunicação utilizado pelos membros da equipe.**  
   - [WhatsAppMessenger](https://www.whatsapp.com/)
 
-- Ferramentas
+- **Ferramentas**
   - Trello
     - [Quadro do projeto](https://trello.com/b/9B14JR7A)
   - GitHub (Repositório e versionamento)
