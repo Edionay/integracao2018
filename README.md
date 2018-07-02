@@ -1,10 +1,10 @@
 # Integracao2018
 Repositório criado com intuito de armazenar arquivos do grupo de Integração de Aplicações da turma 2018/1 do Prof. Fábio Lucena.
 
-## Definição do projeto de integração
-- Escopo definido com clareza.
-  - Qual o problema de integração que será resolvido?  
-  *Será resolvido um problema de integração entre sistemas de caizas de supermercados e um sistema central de estoque. Os caixas enviarão mensagens contendo dados sobre vendas realizadas, e o sistema central irá capturar essas mensagens e processá-las de acordo.*
+## **Definição do projeto de integração**
+- **Escopo definido com clareza.**
+  - **Qual o problema de integração que será resolvido?**  
+  Será resolvido um problema de integração entre sistemas de caizas de supermercados e um sistema central de estoque. Os caixas enviarão mensagens contendo dados sobre vendas realizadas, e o sistema central irá capturar essas mensagens e processá-las de acordo.
 - Informações sobre os dados a serem trocados entre as aplicações
   - JSON, XML, binário?
   *Serão enviados bytes como mensagens.*
