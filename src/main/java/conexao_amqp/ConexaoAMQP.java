@@ -12,9 +12,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class ConexaoAMQP  {
 
-    private ConnectionFactory fabricaDeConexao = new ConnectionFactory();
-    private Connection conexao = fabricaDeConexao.newConnection();
-    private Channel canal = conexao.createChannel();
+    private final ConnectionFactory fabricaDeConexao = new ConnectionFactory();
+    private final Connection conexao = fabricaDeConexao.newConnection();
+    private final Channel canal = conexao.createChannel();
 
     /**
      *Contrutor da conexãoAMQP

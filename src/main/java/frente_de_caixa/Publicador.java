@@ -11,7 +11,7 @@ import java.util.concurrent.TimeoutException;
 
 public class Publicador {
 
-    public static void main(String[] args) throws NoSuchAlgorithmException, KeyManagementException, URISyntaxException, IOException, InterruptedException, TimeoutException {
+    public static void main(String[] args) throws NoSuchAlgorithmException, KeyManagementException, URISyntaxException, IOException {
 
         Venda venda = new Venda("Sabonete",2.50,10);
         publicaMensagem(venda,"pedidos");

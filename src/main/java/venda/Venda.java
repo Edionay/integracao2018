@@ -20,9 +20,6 @@ public class Venda implements Serializable {
         this.setQuantidade(quantidade);
     }
 
-    public Byte toByte(){
-        return this.toByte();
-    }
 
     public String getProduto() {
         return produto;

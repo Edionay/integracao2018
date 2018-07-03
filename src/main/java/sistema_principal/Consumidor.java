@@ -27,7 +27,7 @@ public class Consumidor {
      * @throws InterruptedException
      * @throws ClassNotFoundException
      */
-    public static Venda consumirVenda(ConexaoAMQP conexao, String fila) throws IOException, InterruptedException, ClassNotFoundException {
+    public static Venda consumirVenda(ConexaoAMQP conexao, String fila) throws IOException, InterruptedException {
         //Captura o byte[] e transforma em Objeto
         return Desserializador.jsonParaVenda(conexao.consumirMensagem(fila));
     }
