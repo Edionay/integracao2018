@@ -1,12 +1,15 @@
 package serializer;
 
+import com.google.gson.Gson;
+import venda.Venda;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-public class Serializer {
+public class Serializador {
 
     /**
      * Serializa um objeto e retorna um Array de bytes
@@ -14,13 +17,10 @@ public class Serializer {
      * @return Objeto serializado
      * @throws IOException
      */
-    public static byte[] serialize(Object objeto) throws IOException {
-        try(ByteArrayOutputStream b = new ByteArrayOutputStream()){
-            try(ObjectOutputStream o = new ObjectOutputStream(b)){
-                o.writeObject(objeto);
-            }
-            return b.toByteArray();
-        }
+    public static String paraJSON(Object objeto) {
+
+        Gson json = new Gson();
+        return json.toJson(objeto);
     }
 
     /**
@@ -30,7 +30,7 @@ public class Serializer {
      * @throws IOException
      * @throws ClassNotFoundException
      */
-    public static Object deserialize(byte[] bytesArray) throws IOException, ClassNotFoundException {
+    public static Object aPartirDeJSON(byte[] bytesArray) throws IOException, ClassNotFoundException {
         try(ByteArrayInputStream b = new ByteArrayInputStream(bytesArray)){
             try(ObjectInputStream o = new ObjectInputStream(b)){
                 return o.readObject();
