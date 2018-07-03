@@ -57,9 +57,9 @@ public class Venda implements Serializable {
      * @return
      */
     public String toString(){
-    return  "/n Venda:/n" +
-            "Produto: " + this.getProduto() + "/n" +
-            "Preço: R$" + Double.toString(this.getValor()) + "/n" +
+    return  "Venda:\n" +
+            "Produto: " + this.getProduto() + "\n" +
+            "Preço: R$" + Double.toString(this.getValor()) + "\n" +
             "Quantidade: " + Integer.toString(this.getQuantidade());
     }
 }
