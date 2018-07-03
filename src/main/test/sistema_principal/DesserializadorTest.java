@@ -15,6 +15,8 @@ public class DesserializadorTest {
         Venda venda = new Venda("Sabonete",2.50,10);
 
         String json = "{\"produto\":\"Sabonete\",\"valor\":2.5,\"quantidade\":10 }";
-        assertEquals(venda, jsonParaVenda(json));
+        assertEquals(venda.getProduto(), jsonParaVenda(json).getProduto());
+        assertEquals(venda.getQuantidade(), jsonParaVenda(json).getQuantidade());
+        assertEquals(venda.getClass(), jsonParaVenda(json).getClass());
     }
 }
