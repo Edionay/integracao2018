@@ -1,4 +1,4 @@
-package serializer;
+package frente_de_caixa;
 
 import com.google.gson.Gson;
 import venda.Venda;
