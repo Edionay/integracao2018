@@ -1,6 +1,5 @@
-package sistema_principal;
+package java;
 
-import com.google.gson.Gson;
 import org.junit.Test;
 import venda.Venda;
 
