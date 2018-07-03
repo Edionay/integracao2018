@@ -7,8 +7,14 @@ Repositório criado com intuito de armazenar arquivos do grupo de Integração d
   Será resolvido um problema de integração entre sistemas de caixas de supermercados e um sistema central de estoque. Os vários caixas enviarão mensagens contendo dados sobre vendas realizadas, e o sistema central irá capturar essas mensagens e processá-las de acordo com sua necessidade (contabilização de estoque, computação de contas etc.).
 - **Informações sobre os dados a serem trocados entre as aplicações**  
   - **JSON, XML, binário?**  
-  Serão enviados bytes como mensagens.
-  - **Há um esquema?**
+  Serão enviados arquivos json serializados.
+  - **Há um esquema?**  
+  O esquema do json enviado segue o padrão abaixo:  
+{  
+  “produto”: String,  
+  “valor”: double,  
+  “quantidade”: int,    
+ }  
   - **Qual a frequência da interação entre as aplicações?**  
   Por parte do caixa, a interação ocorre sempre que uma venda for concluída. O sistema central, por sua vez, captura mensagens em intervalos de tempo podendo variar de algumas horas até dariamente.
   - **Em que circunstâncias a interação deve ocorrer?**  
