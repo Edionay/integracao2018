@@ -1,22 +1,21 @@
 package sistema_principal;
 
 import conexao_amqp.ConexaoAMQP;
-import serializer.Serializer;
 import venda.Venda;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
-import java.util.concurrent.TimeoutException;
 
 public class Consumidor {
     public static void main(String[] args) throws NoSuchAlgorithmException, KeyManagementException, URISyntaxException,
             IOException, InterruptedException, ClassNotFoundException {
 
-        ConexaoAMQP conexao = new ConexaoAMQP("amqp://guest:guest@localhost", "pedidos");
-        //Recebe o objeto e dá cast para Venda
-        Venda venda = (Venda) consumir(conexao, "pedidos");
+        ConexaoAMQP conexao = new ConexaoAMQP("amqp://guest:guest@localhost");
+
+        // Consome uma mensagem a partir da fila "pedidos", previamente definida no canal
+        Venda venda = consumirVenda(conexao, "pedidos");
     }
 
     /**
@@ -28,9 +27,9 @@ public class Consumidor {
      * @throws InterruptedException
      * @throws ClassNotFoundException
      */
-    public static Object consumir(ConexaoAMQP conexao, String fila) throws IOException, InterruptedException, ClassNotFoundException {
+    public static Venda consumirVenda(ConexaoAMQP conexao, String fila) throws IOException, InterruptedException, ClassNotFoundException {
         //Captura o byte[] e transforma em Objeto
-        return Serializer.deserialize(conexao.consumirMensagem(fila));
+        return Desserializador.jsonParaVenda(conexao.consumirMensagem(fila));
     }
 
 }
