@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"conexao_amqp","l":"ConexaoAMQP"},{"p":"sistema_principal","l":"Consumidor"},{"p":"frente_de_caixa","l":"Publicador"},{"p":"serializer","l":"Serializer"},{"p":"venda","l":"Venda"}]
